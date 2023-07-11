@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(36, 100%, 99%);
+    font-family: 'Inter';
+}
+
+.navbar {
+    width: 80vw;
+    height: 80px;
+    /* border: black 1px solid; */
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 40px auto 0 auto;
+    position: relative;
+}
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.pc {
+    position: absolute;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    top: 50px;
+    right: 40px;
+    font-weight: 400;
+    color: hsl(236, 13%, 42%);
+}
+.pc li:active {
+    color: hsl(35, 77%, 62%);
+}
+.menu-open, .menu-close {
+    visibility: hidden;
+    pointer-events: none;
+}
+.hero {
+    width: 80vw;
+    height: 60vh;
+    /* border: black solid 1px; */
+    margin: 18px auto;
+    display: flex;
+    flex-direction: row;
+}
+.left {
+    width: 60%;
+    height: 100%;
+}
+.right {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.img {
+    background-image: url('./assets/images/image-web-3-desktop.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    width: 100%;
+    height: 50%;
+}
+.left h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    padding: 10px;
+    width: 50%;
+}
+.head {
+    display: flex;
+    flex-direction: row;
+}
+.head-info {
+    width: 50%;
+}
+.head-info p {
+    padding: 10px;
+    font-weight: 400;
+    color: hsl(236, 13%, 42%);
+}
+.head-info button {
+    width: 150px;
+    height: 38px;
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    border: none;
+    font-size: 0.75rem;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+button:active {
+    background-color: hsl(240, 100%, 5%);
+}
+.right {
+    background-color: hsl(240, 100%, 5%);
+    margin-left: 30px;
+}
+.right h2 {
+    color: hsl(35, 77%, 62%);
+    font-size: 2.8rem;
+    margin-top: 20px;
+    margin-left: 5vw;
+}
+.card {
+    padding: 0.7vw;
+    margin-left: 0.7vw;
+    margin-right: 0.7vw;
+}
+.card:not(:nth-child(4)) {
+    border-bottom: hsl(233, 8%, 79%) 1px solid;
+}
+.card h3 {
+    font-size: 1.5rem;
+}
+.card p {
+    font-size: 1rem;
+}
+.card h3,.card p {
+    color: white;
+    padding: 0.6vw;
+}
+.card h3:active {
+    color: hsl(35, 77%, 62%)
+}
+.footer {
+    width: 80vw;
+    height: auto;
+    margin-left: 10vw;
+    gap: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.clip {
+    width: 30%;
+    height: 17vh;
+    display: flex;
+    flex-direction: row;
+}
+.clip img {
+    height: 17vh;
+}
+.clip-info {
+    margin-left: 0.5vw;
+}
+.clip-info p,.clip-info h3,.clip-info h2 {
+    padding: 0.36vw;
+}
+.clip-info h2 {
+    color: hsl(233, 8%, 79%);
+    font-size: 1.65rem;
+}
+.clip-info h3:active {
+    color: hsl(5, 85%, 63%);
+}
+.mob {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@media (max-width: 1350px) {
+    * {
+        font-size: 13px;
+    }
+}
+@media (max-width: 1045px) {
+    * {
+        font-size: 11px;
+    }
+}
+@media (max-width: 920px) {
+    * {
+        font-size: 9px;
+    }
+}
+@media (max-width: 750px) {
+    * {
+        font-size: 7px;
+    }
+    .hero {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+    }
+    .left {
+        width: 100%;
+    }
+    .left h1 {
+        width: 100%;
+    }
+    .right {
+        margin-left: 0;
+        width: 100%;
+    }
+    .head {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .head-info {
+        width: 100%;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 10vh;
+    }
+    .clip {
+        width: 100%;
+    }
+    .clip h2 {
+        font-size: 3rem;
+    }
+    .clip h3 {
+        font-size: 2rem;
+    }
+    .clip p {
+        font-size: 1.5rem;
+    }
+    .pc {
+        visibility: hidden;
+    }
+    .menu-open {
+        visibility: visible;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        pointer-events: all;
+    }
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        pointer-events: all;
+        z-index: 3;
+    }
+    .mob {
+        /* visibility: visible; */
+        pointer-events: all;
+        list-style-type: none;
+        z-index: 2;
+        background-color: hsl(36, 100%, 99%);
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        width: 65vw;
+    }
+    .mob li {
+        font-size: 5rem;
+        padding: 10px;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+}
